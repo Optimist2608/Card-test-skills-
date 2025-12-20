@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Figtree-ExtraBold';
+    src:
+    local('Figtree-ExtraBold'),
+    url('./fonts/Figtree-ExtraBold.woff2') format('woff2'),
+    url('./fonts/Figtree-ExtraBold.woff') format('woff'),
+    url('./fonts/Figtree-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Figtree-Medium';
+    src:
+    local('Figtree-Medium'),
+    url('./fonts/Figtree-Medium.woff2') format('woff2'),
+    url('./fonts/Figtree-Medium.woff') format('woff'),
+    url('./fonts/Figtree-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-family: 'Figtree-Medium', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: #111111;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F4D04E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+img {
+    vertical-align: top;
+}
+/*
+ ██████   ██████   █████████   █████ ██████   █████
+▒▒██████ ██████   ███▒▒▒▒▒███ ▒▒███ ▒▒██████ ▒▒███
+ ▒███▒█████▒███  ▒███    ▒███  ▒███  ▒███▒███ ▒███
+ ▒███▒▒███ ▒███  ▒███████████  ▒███  ▒███▒▒███▒███
+ ▒███ ▒▒▒  ▒███  ▒███▒▒▒▒▒███  ▒███  ▒███ ▒▒██████
+ ▒███      ▒███  ▒███    ▒███  ▒███  ▒███  ▒▒█████
+ █████     █████ █████   █████ █████ █████  ▒▒█████
+▒▒▒▒▒     ▒▒▒▒▒ ▒▒▒▒▒   ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒▒▒    ▒▒▒▒▒
+*/
+.card {
+    width: 384px;
+    height: 523px;
+    /* border: 1px solid #111111; */
+    border-radius: 20px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 24px;
+    box-shadow:8px 8px #000000,0px -1px 0px #000000,-1px 0px 0px #000000;
+    background-color: #FFFFFF;
+}
+.svg {
+    width: 336px;
+    height: 201px;
+    border: 0px;
+    border-radius: 10px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 336px;
+    height: 194px;
+}
+.tag {
+    font-size: 0.875rem;
+    border: 0px;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: #F4D04E;
+    padding: 4px 12px;
+    width: 82px;
+    /* height: 29px; */
+    font-family: 'Figtree-ExtraBold', sans-serif;
+    line-height: 150%;
+}
+.data {
+    font-size: 0.875rem;
+    width: 143px;
+    /* height: 21px; */
+    display: inline-block;
+}
+.hover {
+    font-size: 1.5rem;
+    font-family: 'Figtree-ExtraBold', sans-serif;
+    width: 336px;
+    /* height: 36px; */
+    display: inline-block;
+    cursor: pointer;
+    transition: 300ms;
+}
+.hover:hover {
+    color: #F4D04E;
+}
+.description {
+    color: #6B6B6B;
+    width: 336px;
+    display: inline-block;
+    text-align: left;
+    line-height: 150%;
+}
+.user {
+    display: inline-flex;
+    gap: 12px;
+    height: 32px;
+    width: 129px;
+}
+.pic_me {
+    width: 32px;
+    height: 32px;
+}
+.me {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.user_text {
+    color: #111111;
+    font-family: 'Figtree-ExtraBold';
+    font-size: 0.875rem;
+    align-self: center;
+}
+.hid {
+    display: none;
+}
+/*
+ ███████████                       █████        ████████ 
+▒▒███▒▒▒▒▒███                     ▒▒███        ███▒▒▒▒███
+ ▒███    ▒███  ██████   ████████  ███████     ▒▒▒    ▒███
+ ▒██████████  ▒▒▒▒▒███ ▒▒███▒▒███▒▒▒███▒         ███████ 
+ ▒███▒▒▒▒▒▒    ███████  ▒███ ▒▒▒   ▒███         ███▒▒▒▒  
+ ▒███         ███▒▒███  ▒███       ▒███ ███    ███      █
+ █████       ▒▒████████ █████      ▒▒█████    ▒██████████
+▒▒▒▒▒         ▒▒▒▒▒▒▒▒ ▒▒▒▒▒        ▒▒▒▒▒     ▒▒▒▒▒▒▒▒▒▒ 
+*/
+@media (max-width:450px) {
+    .card {
+        width: 327px;
+        height: 502px;
+    }
+    .svg {
+        width: 279px;
+    }
+    .hid {
+        display: inline-block;
+    }
+    .hid2 {
+        display: none;
+    }
+    .text {
+        width: 279px;
+        height: 173px;
+    }
+    .tag  {
+        font-size: 0.75rem;
+        width: 73px;
+    }
+    .data {
+        font-size: 0.75rem;
+        width: 123px;
+    }
+    .hover {
+        font-size: 1.25rem;
+        width: 279px;
+    }
+    .description {
+        font-size: 0.875rem;
+        width: 279px;
+        height: 63px;
+    }
+}
